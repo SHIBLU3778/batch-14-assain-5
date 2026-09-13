@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Brand gradient - defined once, used everywhere (brand name, hero highlight, buttons) */
+:root {
+  --brand-gradient: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6);
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+/* Reusable gradient text helper */
+.brand-gradient-text {
+  background-image: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Reusable gradient background helper (buttons, logo box) */
+.brand-gradient-bg {
+  background-image: var(--brand-gradient);
+}
