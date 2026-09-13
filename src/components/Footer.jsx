@@ -1,104 +1,178 @@
-const linkGroups = [
-  {
-    title: "Product",
-    links: [
-      { name: "Home", href: "#home" },
-      { name: "Technologies", href: "#technologies" },
-      { name: "Projects", href: "#projects" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { name: "About", href: "#about" },
-      { name: "Contact", href: "#contact" },
-      { name: "Careers", href: "#" },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      { name: "Privacy Policy", href: "#" },
-      { name: "Terms of Service", href: "#" },
-    ],
-  },
-];
+import logo from './../assets/images/logo-text.png';
 
-const socialLinks = [
-  { name: "GitHub", href: "https://github.com" },
-  { name: "Twitter", href: "https://twitter.com" },
-  { name: "LinkedIn", href: "https://linkedin.com" },
-];
-
-function Footer() {
-  const year = new Date().getFullYear();
-
+const Footer = () => {
   return (
-    <footer className="border-t border-gray-200 mt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="w-full bg-white">
+      <div className="mx-auto w-[95%]  px-6 pt-12 pb-8 lg:px-0">
+        <div className="grid  grid-cols-1  gap-10 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">
+          <div className="flex flex-col justify-center sm:jsutify-start sm:items-start items-center">
+            {/* <div className='flex justify-center items-center gap-2'>
+              <img src={logo} alt="Dev Stack" className='w-[40px]'/>
+            <p className="text-[23px] font-bold ">Dev <span className={`${brandColor} bg-clip-text text-transparent`}>Stack</span></p>
 
-          {/* Brand block */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-2">
+            </div> */}
+            {/* <img src={logo} classname="w-[100px]" /> */}
+            <a href="#home" className="flex items-center gap-2">
               <span className="brand-gradient-bg w-8 h-8 rounded-lg flex items-center justify-center text-white font-bold text-sm">
                 DS
               </span>
               <span className="font-bold text-lg text-gray-900">
                 Dev <span className="brand-gradient-text">Stack</span>
               </span>
-            </div>
+            </a>
 
-            <p className="text-sm text-gray-500 mt-4 max-w-xs">
+            <p className="text-center sm:text-start mt-4 max-w-[350px] text-[14px] leading-[18px] text-[#7A879F]">
               Curated tools, technologies, and resources for developers building
               modern software.
             </p>
 
-            <div className="flex gap-4 mt-5">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  {social.name}
-                </a>
-              ))}
+            <div className="mt-5 flex items-center gap-5">
+              <a
+                href="#"
+                className="text-[14px] font-medium text-[#34415A] transition-colors duration-200 hover:text-[#D91B7E]"
+              >
+                GitHub
+              </a>
+              <span className="sm:hidden">•</span>
+              <a
+                href="#"
+                className="text-[14px] font-medium text-[#34415A] transition-colors duration-200 hover:text-[#D91B7E]"
+              >
+                Twitter
+              </a>
+              <span className="sm:hidden">•</span>
+              <a
+                href="#"
+                className="text-[14px] font-medium text-[#34415A] transition-colors duration-200 hover:text-[#D91B7E]"
+              >
+                LinkedIn
+              </a>
             </div>
           </div>
 
-          {/* Three link groups */}
-          {linkGroups.map((group) => (
-            <div key={group.title}>
-              <h4 className="text-xs font-semibold text-gray-900 tracking-wide uppercase">
-                {group.title}
-              </h4>
-              <ul className="mt-4 flex flex-col gap-3">
-                {group.links.map((link) => (
-                  <li key={link.name}>
-                    <a href={link.href} className="text-sm text-gray-500 hover:text-gray-900">
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="hidden sm:block">
+            <h3 className="mb-4 text-[14px] font-semibold uppercase tracking-wide text-[#182238]">
+              Product
+            </h3>
+
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  className="text-[14px] text-[#71809A] transition-colors duration-200 hover:text-[#D91B7E]"
+                >
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="text-[14px] text-[#71809A] transition-colors duration-200 hover:text-[#D91B7E]"
+                >
+                  Technologies
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="text-[14px] text-[#71809A] transition-colors duration-200 hover:text-[#D91B7E]"
+                >
+                  Projects
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="hidden sm:block">
+            <h3 className="mb-4 text-[14px] font-semibold uppercase tracking-wide text-[#182238]">
+              Company
+            </h3>
+
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  className="text-[14px] text-[#71809A] transition-colors duration-200 hover:text-[#D91B7E]"
+                >
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="text-[14px] text-[#71809A] transition-colors duration-200 hover:text-[#D91B7E]"
+                >
+                  Contact
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="text-[14px] text-[#71809A] transition-colors duration-200 hover:text-[#D91B7E]"
+                >
+                  Careers
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="hidden sm:block">
+            <h3 className="mb-4 text-[14px] font-semibold uppercase tracking-wide text-[#182238]">
+              Legal
+            </h3>
+
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  className="text-[14px] text-[#71809A] transition-colors duration-200 hover:text-[#D91B7E]"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="text-[14px] text-[#71809A] transition-colors duration-200 hover:text-[#D91B7E]"
+                >
+                  Terms of Service
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-400">© {year} Dev Stack. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="text-sm text-gray-400 hover:text-gray-700">Privacy</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-gray-700">Terms</a>
+        <div className="mt-12 border-t border-[#EDF0F5]"></div>
+
+        <div className="flex  gap-4 pt-7 flex-row items-center justify-between">
+          <p className="text-[14px] text-[#9AA7BC]">
+            © 2026 Dev Stack. All rights reserved.
+          </p>
+
+          <div className="flex items-center gap-6">
+            <a
+              href="#"
+              className="text-[14px] text-[#9AA7BC] transition-colors duration-200 hover:text-[#D91B7E]"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="#"
+              className="text-[14px] text-[#9AA7BC] transition-colors duration-200 hover:text-[#D91B7E]"
+            >
+              Terms
+            </a>
           </div>
         </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
