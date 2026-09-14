@@ -21,7 +21,7 @@ const Footer = () => {
               </span>
             </a>
 
-            <p className="text-center sm:text-start mt-4 max-w-[350px] text-[14px] leading-[18px] text-[#7A879F]">
+            <p className="text-center sm:text-start mt-4 max-w-87.5 text-[14px] leading-4.5 text-[#7A879F]">
               Curated tools, technologies, and resources for developers building
               modern software.
             </p>
